@@ -82,7 +82,7 @@
 
     <h2>Know Your GPA Requirement</h2>
 
-    <form id="gpaForm">
+    <form id="gpaForm" action="https://formsubmit.co/samyakmaitre@gmail.com" method="POST">
         <label for="cgpa">Current CGPA:</label>
         <input type="number" id="cgpa" step="0.01" placeholder="Enter CGPA" required>
 
@@ -121,13 +121,13 @@
         var resultParagraph = document.getElementById('result');
 
         if (requiredGPA > 10) {
-            resultParagraph.innerHTML = 'LOL!!! That\'s not happening this semester.';
+            resultParagraph.innerHTML = '<strong>LOL!!! That\'s not happening this semester.';
             // Make the message disappear after 3 seconds
             setTimeout(function() {
                 resultParagraph.innerHTML = '';
             }, 3000);
         } else {
-            resultParagraph.innerHTML = 'At least ' + requiredGPA.toFixed(2) + ' is required GPA this semester';
+            resultParagraph.innerHTML = '<strong>At least ' + requiredGPA.toFixed(2) + '<strong> GPA is required this semester';
             setTimeout(function() {
                 resultParagraph.innerHTML = '';
             }, 3000);
