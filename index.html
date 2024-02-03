@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Required GPA Calculator</title>
     <style>
         body {
@@ -13,7 +14,7 @@
             background-position: center;
             background-size: cover;
             margin: 0;
-            padding: 0px 20px 0px 20px;
+            padding: 0px 0px 0px 0px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -23,10 +24,14 @@
 
         h2 {
             color: #333;
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center; 
+    padding: 10px 0px;
         }
 
         form {
-            background-color: #fff;
+            background-color: #ffffffa4;
             padding: 20px;
            
             border-radius: 8px;
@@ -87,6 +92,9 @@
 
         <button type="button" onclick="calculateRequiredGPA()">Calculate</button>
     </form>
+    <a href="https://github.com/samyakmaitre" target="#">
+        <i class="fa fa-github" style="font-size:30px;color:rgb(0, 0, 0);background-color: white; border-radius: 100px;margin-top: 10px;padding: 10px 13px 10px 13px; box-shadow: 0px 0px 10px;"></i>
+      </a>
 
     <p id="result"></p>
 
