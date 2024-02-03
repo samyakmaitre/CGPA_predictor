@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,21 +6,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Required GPA Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
 
     <h2>Required GPA Calculator</h2>
 
-    <label for="cgpa">Enter CGPA till last semester:</label>
-    <input type="number" id="cgpa" step="0.01" placeholder="Enter CGPA" required>
+    <form id="gpaForm">
+        <label for="cgpa">Enter CGPA till last semester:</label>
+        <input type="number" id="cgpa" step="0.01" placeholder="Enter CGPA" required>
 
-    <label for="currentSem">Enter current semester number:</label>
-    <input type="number" id="currentSem" placeholder="Enter Semester Number" required>
+        <label for="currentSem">Enter current semester number:</label>
+        <input type="number" id="currentSem" placeholder="Enter Semester Number" required>
 
-    <label for="expectedCgpa">Enter expected CGPA:</label>
-    <input type="number" id="expectedCgpa" step="0.01" placeholder="Enter Expected CGPA" required>
+        <label for="expectedCgpa">Enter expected CGPA:</label>
+        <input type="number" id="expectedCgpa" step="0.01" placeholder="Enter Expected CGPA" required>
 
-    <button onclick="calculateRequiredGPA()">Calculate Required GPA</button>
+        <button type="button" onclick="calculateRequiredGPA()">Calculate Required GPA</button>
+    </form>
 
     <p id="result"></p>
 
