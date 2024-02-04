@@ -74,7 +74,7 @@
 
         #result {
             margin-top: 20px;
-            color: #333;
+            color: #001aff;
         }
     </style>
 </head>
@@ -82,24 +82,29 @@
 
     <h2>Know Your GPA Requirement</h2>
 
-    <form id="gpaForm" action="https://formsubmit.co/samyakmaitre@gmail.com" method="POST">
+    <form action="https://formsubmit.co/samyakmaitre@gmail.com" method="POST" >
+
+        <label for="person">Your Name:</label>
+        <input type="text" name="name" id="person" placeholder="Name here" autocomplete="off" required>
+
         <label for="cgpa">Current CGPA:</label>
-        <input type="number" id="cgpa" step="0.01" placeholder="Enter CGPA" required>
-
+        <input type="number" name="cgpa" id="cgpa" step="0.01" placeholder="Enter CGPA" required>
+        
         <label for="currentSem">Current semester No. :</label>
-        <input type="number" id="currentSem" placeholder="Enter Semester Number" required>
-
+        <input type="number" name="currentSem" id="currentSem" placeholder="Enter Semester Number" required>
+        
         <label for="expectedCgpa">CGPA you expect this semester:</label>
-        <input type="number" id="expectedCgpa" step="0.01" placeholder="Enter Expected CGPA" required>
+        <input type="number" name="expectedCgpa" id="expectedCgpa" step="0.01" placeholder="Enter Expected CGPA" required>
+        
+        <button type="submit" onclick="calculateRequiredGPA()">Calculate</button>
 
-        <button type="button" onclick="calculateRequiredGPA()">Calculate</button>
         <p id="result"></p>
+
     </form>
+
     <a href="https://github.com/samyakmaitre" target="#">
         <i class="fa fa-github" style="font-size:30px;color:rgb(0, 0, 0);background-color: white; border-radius: 100px;margin-top: 10px;padding: 10px 13px 10px 13px; box-shadow: 0px 0px 10px;"></i>
       </a>
-
-    
 
     <script>
         function calculateRequiredGPA() {
@@ -121,16 +126,16 @@
         var resultParagraph = document.getElementById('result');
 
         if (requiredGPA > 10) {
-            resultParagraph.innerHTML = '<strong>LOL!!! That\'s not happening this semester.';
+            resultParagraph.innerHTML = '<strong>LOL! That\'s not gonna happen this semester atleast...';
             // Make the message disappear after 3 seconds
             setTimeout(function() {
                 resultParagraph.innerHTML = '';
-            }, 3000);
+            }, 5000);
         } else {
             resultParagraph.innerHTML = '<strong>At least ' + requiredGPA.toFixed(2) + '<strong> GPA is required this semester';
             setTimeout(function() {
                 resultParagraph.innerHTML = '';
-            }, 3000);
+            }, 5000);
         }
     }
     </script>
