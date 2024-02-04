@@ -17,7 +17,7 @@ function calculateRequiredGPA() {
     var resultParagraph = document.getElementById('result');
 
     if (requiredGPA > 10) {
-        resultParagraph.innerHTML = '<strong style="text-align: center;">LOL! That\'s not happening this semester atleast...';
+        resultParagraph.innerHTML = '<strong style="text-align: center;">Well! That\'s not happening this semester atleast...';
             
         setTimeout(function() {
             resultParagraph.innerHTML = '';
