@@ -12,6 +12,11 @@ body {
     height: 100vh;
 }
 
+.desc{
+    color: #ffffff;
+   
+}
+
 h2 {
     font-weight: 800;
     color: #000000;
