@@ -88,15 +88,15 @@
         <input type="text" name="name" id="person" placeholder="Name here" autocomplete="off" required>
 
         <label for="cgpa">Current CGPA:</label>
-        <input type="number" name="cgpa" id="cgpa" step="0.01" placeholder="Enter CGPA" required>
+        <input type="number" name="cgpa" id="cgpa" step="0.01" placeholder="Enter CGPA" autocomplete="off" required>
         
         <label for="currentSem">Current semester No. :</label>
-        <input type="number" name="currentSem" id="currentSem" placeholder="Enter Semester Number" required>
+        <input type="number" name="currentSem" id="currentSem" placeholder="Enter Semester Number" autocomplete="off" required>
         
         <label for="expectedCgpa">CGPA you expect this semester:</label>
-        <input type="number" name="expectedCgpa" id="expectedCgpa" step="0.01" placeholder="Enter Expected CGPA" required>
+        <input type="number" name="expectedCgpa" id="expectedCgpa" step="0.01" placeholder="Enter Expected CGPA" autocomplete="off" required>
         
-        <button type="submit" onclick="calculateRequiredGPA()">Calculate</button>
+        <button type="submit" onclick="calculateRequiredGPA()" onkeydown="if (event.keyCode === 13) calculateRequiredGPA()">Calculate</button>
 
         <p id="result"></p>
 
@@ -130,12 +130,12 @@
             // Make the message disappear after 3 seconds
             setTimeout(function() {
                 resultParagraph.innerHTML = '';
-            }, 5000);
+            }, 4000);
         } else {
             resultParagraph.innerHTML = '<strong>At least ' + requiredGPA.toFixed(2) + '<strong> GPA is required this semester';
             setTimeout(function() {
                 resultParagraph.innerHTML = '';
-            }, 5000);
+            }, 4000);
         }
     }
     </script>
