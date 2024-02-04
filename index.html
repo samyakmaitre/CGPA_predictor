@@ -13,16 +13,23 @@
 <body>
 
     <h2>- Know Your GPA Requirement -</h2>
+    <p>Write a  paragrpah about this</p>
 
     <form id="gpaForm">
-        <label for="cgpa">Enter CGPA till last semester:</label>
+
+        <label for="cgpa">Current CGPA:</label>
         <input type="number" id="cgpa" step="0.01" placeholder="Enter CGPA" required>
-        <label for="currentSem">Enter current semester number:</label>
+
+        <label for="currentSem">Current semester No. :</label>
         <input type="number" id="currentSem" placeholder="Enter Semester Number" required>
-        <label for="expectedCgpa">Enter expected CGPA:</label>
+
+        <label for="expectedCgpa">CGPA you expect this semester:</label>
         <input type="number" id="expectedCgpa" step="0.01" placeholder="Enter Expected CGPA" required>
+
         <button type="button" onclick="calculateRequiredGPA()">Calculate</button>
+
         <p id="result"></p>
+
     </form>
     <a href="https://github.com/samyakmaitre" target="#">
         <i class="fa fa-github" style="font-size:30px;color:rgb(0, 0, 0);background-color: white; border-radius: 100px;margin-top: 10px;padding: 10px 13px 10px 13px; box-shadow: 0px 0px 10px;"></i>
