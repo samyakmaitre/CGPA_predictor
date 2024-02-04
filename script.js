@@ -17,7 +17,7 @@ function calculateRequiredGPA() {
     var resultParagraph = document.getElementById('result');
 
     if (requiredGPA > 10) {
-        resultParagraph.innerHTML = '<strong style="text-align: center;">LOL! That\'s not gonna happen this semester atleast...';
+        resultParagraph.innerHTML = '<strong style="text-align: center;">LOL! That\'s not happening this semester atleast...';
         // Make the message disappear after 3 seconds
         setTimeout(function() {
             resultParagraph.innerHTML = '';
